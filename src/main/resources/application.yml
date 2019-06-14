@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://own-mysql:3306/test?useSSL=false # own-mysql refers to Docker Compose service defined in the below docker-compose.yml file
+#    url: jdbc:mysql://localhost:3306/test?useSSL=false # own-mysql refers to Docker Compose service defined in the below docker-compose.yml file
+    username: root
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    generate-ddl: true
+    show-sql: true
+
+  freemarker:
+    suffix: .html
